@@ -7,13 +7,18 @@ import com.meshal.stock.entity.StockEntity;
 import com.meshal.stock.repository.StockRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class StockServiceImpl implements StockService {
 
     private final StockRepository repository;
+    private final StockRepository stockRepository;
 
-    public StockServiceImpl(StockRepository repository) {
+    public StockServiceImpl(StockRepository repository, StockRepository stockRepository) {
         this.repository = repository;
+        this.stockRepository = stockRepository;
     }
 
     @Override
@@ -63,5 +68,13 @@ public class StockServiceImpl implements StockService {
             i.setQuantity(stock.getQuantity());
             repository.save(i);
         }
+    }
+
+    @Override
+    public List<StockEntity> getStocks() {
+        Iterable<StockEntity> stocks = repository.findAll();
+        List<StockEntity> stockList = new ArrayList<>();
+        stocks.forEach(stockList::add);
+        return stockList;
     }
 }

@@ -16,6 +16,14 @@ public class StockEntity {
     @Column
     private String item;
 
+    public StockEntity() {
+    }
+
+    public StockEntity(Long quantity, String item) {
+        this.quantity = quantity;
+        this.item = item;
+    }
+
     public long getId() {
         return id;
     }

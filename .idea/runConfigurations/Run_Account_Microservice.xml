@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Account Microservice" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.meshal.account.AccountApplication" />
+    <module name="Account" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
