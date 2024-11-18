@@ -14,11 +14,9 @@ import java.util.List;
 public class StockServiceImpl implements StockService {
 
     private final StockRepository repository;
-    private final StockRepository stockRepository;
 
-    public StockServiceImpl(StockRepository repository, StockRepository stockRepository) {
+    public StockServiceImpl(StockRepository repository) {
         this.repository = repository;
-        this.stockRepository = stockRepository;
     }
 
     @Override
