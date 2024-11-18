@@ -1,10 +1,10 @@
-package com.meshal.order;
+package com.meshal.stock;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class OrderStockApplicationTests {
+class StockApplicationTests {
 
     @Test
     void contextLoads() {

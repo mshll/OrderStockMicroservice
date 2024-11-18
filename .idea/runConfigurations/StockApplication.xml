@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="StockApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="Stock" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.meshal.stock.StockApplication" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
