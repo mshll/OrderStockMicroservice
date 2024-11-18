@@ -11,6 +11,6 @@ public interface StockService {
     UpdateStockResponse updateStock(CreateStockRequest request);
 
     void addItems(CreateStockRequest stock);
-
+    
     List<StockEntity> getStocks();
 }

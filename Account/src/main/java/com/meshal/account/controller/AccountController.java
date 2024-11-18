@@ -24,12 +24,6 @@ public class AccountController {
 
     @GetMapping("/account")
     public AccountResponse getAccount() {
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_JSON);
-
-//        HttpEntity<CreateOrderRequest> request = new HttpEntity<>(customerOrder, headers);
-
-//        ResponseEntity<OrderResponse> responseEntity = restTemplate.postForEntity(STOCK_API, request, OrderResponse.class);
         ResponseEntity<AccountResponse> responseEntity = restTemplate.getForEntity(STOCK_API, AccountResponse.class);
         AccountResponse accountResponse = responseEntity.getBody();
 

@@ -70,9 +70,6 @@ public class StockServiceImpl implements StockService {
 
     @Override
     public List<StockEntity> getStocks() {
-        Iterable<StockEntity> stocks = repository.findAll();
-        List<StockEntity> stockList = new ArrayList<>();
-        stocks.forEach(stockList::add);
-        return stockList;
+        return repository.findAll();
     }
 }
