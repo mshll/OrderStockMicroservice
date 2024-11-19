@@ -11,8 +11,8 @@
     <groupId>com.meshal</groupId>
     <artifactId>Stock</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>OrderStock</name>
-    <description>OrderStock</description>
+    <name>Stock</name>
+    <description>Stock Microservice</description>
     <url/>
     <licenses>
         <license/>
@@ -48,6 +48,15 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot3</artifactId>
+            <version>2.0.2</version>
         </dependency>
     </dependencies>
 

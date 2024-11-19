@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run All Microservices" type="CompoundRunConfigurationType">
+    <toRun name="Run Account Microservice" type="Application" />
+    <toRun name="Run Order Microservice" type="Application" />
+    <toRun name="Run Stock Microservice" type="Application" />
+    <method v="2" />
+  </configuration>
+</component>

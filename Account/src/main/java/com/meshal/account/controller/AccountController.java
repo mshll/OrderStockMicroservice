@@ -1,6 +1,7 @@
 package com.meshal.account.controller;
 
 import com.meshal.account.bo.AccountResponse;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -23,12 +24,17 @@ public class AccountController {
 
 
     @GetMapping("/account")
-    public AccountResponse getAccount() {
+    @CircuitBreaker(name = "accountCB", fallbackMethod = "getAccountFallback")
+    public ResponseEntity<Object> getAccount() {
         ResponseEntity<AccountResponse> responseEntity = restTemplate.getForEntity(STOCK_API, AccountResponse.class);
         AccountResponse accountResponse = responseEntity.getBody();
 
         System.out.println("Order Status::" + accountResponse);
 
-        return accountResponse;
+        return ResponseEntity.ok(accountResponse);
+    }
+
+    public ResponseEntity<String> getAccountFallback(Throwable throwable) {
+        return ResponseEntity.badRequest().body(throwable.getMessage());
     }
 }
